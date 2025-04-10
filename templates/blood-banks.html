@@ -1,0 +1,22 @@
+{% extends "base.html" %} <!-- if you have a base template -->
+
+{% block content %}
+<div class="blood-bank-container">
+    <h1>Find Blood Banks in Your City</h1>
+    
+    <div class="search-box">
+        <input type="text" id="city-input" placeholder="Enter city name">
+        <button id="search-btn">Search</button>
+    </div>
+    
+    <div id="results-container">
+        <!-- Results will be displayed here -->
+    </div>
+    
+    <div id="no-results" style="display: none;">
+        <p>No blood banks found in this city. Try a nearby major city.</p>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/blood-banks.js') }}"></script>
+{% endblock %}
